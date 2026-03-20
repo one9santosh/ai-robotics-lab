@@ -869,7 +869,8 @@ img  { max-width: 100%; display: block; }
 .wc p  { font-size:.8rem; color:var(--ink-3); line-height:1.6; }
 
 @media(min-width:900px) {
-  .why-layout { grid-template-columns:1fr 1.5fr; gap:72px; align-items:start; }
+  .why-layout { grid-template-columns:1fr 1.5fr; gap:72px; align-items:center; }
+  .why-left { align-self:center; }
 }
 
 /* ================================================================
@@ -966,7 +967,8 @@ img  { max-width: 100%; display: block; }
 .form-success p { font-size:.88rem; color:var(--ink-3); }
 
 @media(min-width:900px) {
-  .lead-layout { grid-template-columns:1fr 1.1fr; gap:72px; align-items:start; }
+  .lead-layout { grid-template-columns:1fr 1.1fr; gap:72px; align-items:center; }
+  .lead-left { align-self:center; }
   .lead-form-box { padding:36px; }
 }
 @media(max-width:480px) {
