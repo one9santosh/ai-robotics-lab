@@ -214,47 +214,6 @@ if (mq) {
 }
 
 
-/* ─── 9. HERO TILT PARALLAX ─── */
-(function() {
-  const wrap = document.getElementById('heroImgWrap');
-  const img  = document.getElementById('heroFloatImg');
-  if (!wrap || !img) return;
-
-  wrap.addEventListener('mousemove', e => {
-    const r = wrap.getBoundingClientRect();
-    const x = ((e.clientX - r.left) / r.width  - 0.5) * 2;  // -1 to 1
-    const y = ((e.clientY - r.top)  / r.height - 0.5) * 2;
-    img.style.transform = `rotateY(${x * 10}deg) rotateX(${-y * 8}deg) scale(1.03)`;
-    img.style.boxShadow = `${-x * 18}px ${y * 12}px 48px rgba(17,24,39,.22)`;
-  });
-  wrap.addEventListener('mouseleave', () => {
-    img.style.transform = '';
-    img.style.boxShadow = '';
-  });
-})();
-
-
-/* ─── 10. HERO TYPEWRITER on eyebrow ─── */
-(function() {
-  const el = document.querySelector('.eyebrow');
-  if (!el) return;
-  const full = el.textContent.trim();
-  el.textContent = '';
-  el.style.opacity = '1';
-  // re-add the dot span
-  const dot = document.createElement('span');
-  dot.className = 'ey-dot';
-  el.appendChild(dot);
-  const textNode = document.createTextNode('');
-  el.appendChild(textNode);
-  let i = 0;
-  const txt = ' ' + full.replace(/^\s*/, '');
-  const iv = setInterval(() => {
-    textNode.textContent += txt[i++];
-    if (i >= txt.length) clearInterval(iv);
-  }, 45);
-})();
-
 
 /* ─── 11. ACTIVE NAV HIGHLIGHT ─── */
 const navAs   = document.querySelectorAll('.nav-center a');
