@@ -183,13 +183,7 @@ img  { max-width: 100%; display: block; }
 .hero-cards { display:none; }
 
 /* Floating bg animation keyframes */
-@keyframes float-y    { 0%,100%{transform:translateY(0)}       50%{transform:translateY(-14px)} }
-@keyframes orb-drift  { 0%,100%{transform:translate(0,0) scale(1)}  50%{transform:translate(18px,-22px) scale(1.08)} }
-@keyframes orb-drift2 { 0%,100%{transform:translate(0,0) scale(1)}  50%{transform:translate(-14px,16px) scale(1.06)} }
-@keyframes orb-drift3 { 0%,100%{transform:translate(0,0) scale(1)}  50%{transform:translate(10px,12px) scale(0.94)} }
-@keyframes ring-spin  { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
-@keyframes ring-spin-r{ from{transform:rotate(0deg)} to{transform:rotate(-360deg)} }
-@keyframes dot-pop    { 0%,100%{transform:scale(1);opacity:.7} 50%{transform:scale(1.5);opacity:1} }
+@keyframes float-y    { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-14px)} }
 
 @media(min-width:900px) {
   .hero-inner { grid-template-columns:1fr 1fr; gap:60px; padding:60px 28px 80px; }
@@ -199,63 +193,10 @@ img  { max-width: 100%; display: block; }
     position:relative; padding:40px;
   }
 
-  /* large orange glow blob — back-left */
-  .hero-img-wrap::before {
-    content:''; position:absolute;
-    width:340px; height:340px; border-radius:50%;
-    background:radial-gradient(circle, rgba(249,115,22,.22) 0%, transparent 70%);
-    top:-20px; left:-20px; pointer-events:none;
-    animation:orb-drift 6s ease-in-out infinite;
-  }
-  /* teal glow blob — bottom-right */
-  .hero-img-wrap::after {
-    content:''; position:absolute;
-    width:260px; height:260px; border-radius:50%;
-    background:radial-gradient(circle, rgba(13,148,136,.20) 0%, transparent 70%);
-    bottom:-10px; right:-10px; pointer-events:none;
-    animation:orb-drift2 7s ease-in-out infinite;
-  }
-
-  /* spinning dashed ring */
-  .hero-img-wrap .hi-ring {
-    position:absolute; width:420px; height:420px; border-radius:50%;
-    border:2px dashed rgba(249,115,22,.18);
-    animation:ring-spin 18s linear infinite;
-    pointer-events:none;
-  }
-  /* second counter-spinning ring */
-  .hero-img-wrap .hi-ring2 {
-    position:absolute; width:320px; height:320px; border-radius:50%;
-    border:1.5px dashed rgba(13,148,136,.18);
-    animation:ring-spin-r 14s linear infinite;
-    pointer-events:none;
-  }
-
-  /* small floating dots */
-  .hero-img-wrap .hi-dot {
-    position:absolute; border-radius:50%; pointer-events:none;
-    animation:dot-pop 3s ease-in-out infinite;
-  }
-  .hero-img-wrap .hi-dot:nth-child(1){ width:12px;height:12px;background:var(--orange);   top:18%;  left:4%;  animation-delay:0s; }
-  .hero-img-wrap .hi-dot:nth-child(2){ width:8px; height:8px; background:var(--teal);     top:72%;  left:8%;  animation-delay:.8s; }
-  .hero-img-wrap .hi-dot:nth-child(3){ width:10px;height:10px;background:var(--orange-d); top:12%;  right:6%; animation-delay:1.4s; }
-  .hero-img-wrap .hi-dot:nth-child(4){ width:7px; height:7px; background:var(--teal);     top:80%;  right:5%; animation-delay:.4s; }
-  .hero-img-wrap .hi-dot:nth-child(5){ width:9px; height:9px; background:var(--orange);   top:50%;  left:2%;  animation-delay:2s; }
-
-  /* small purple accent orb */
-  .hero-img-wrap .hi-orb {
-    position:absolute; border-radius:50%; pointer-events:none;
-    width:80px; height:80px;
-    background:radial-gradient(circle, rgba(124,58,237,.15) 0%, transparent 70%);
-    top:10%; right:2%;
-    animation:orb-drift3 5s ease-in-out infinite;
-  }
-
   .hero-float-img {
     position:relative; z-index:2;
     width:100%; max-width:460px; border-radius:24px;
     box-shadow:0 24px 64px rgba(17,24,39,0.18);
-    animation:float-y 4s ease-in-out infinite;
     object-fit:cover; aspect-ratio:4/3;
   }
 
@@ -347,7 +288,7 @@ img  { max-width: 100%; display: block; }
    MARQUEE
 ================================================================ */
 .marquee-bar { background:var(--ink); overflow:hidden; padding:13px 0; }
-.mq-track { display:inline-flex; gap:28px; white-space:nowrap; animation:mq 28s linear infinite; }
+.mq-track { display:inline-flex; gap:28px; white-space:nowrap; animation:mq 28s linear infinite; will-change:transform; }
 .mq-track span { font-family:var(--fd); font-size:.85rem; font-weight:700; color:rgba(255,255,255,.85); }
 .mq-track em { color:var(--orange); font-style:normal; font-size:.7rem; }
 @keyframes mq { from{transform:translateX(0)} to{transform:translateX(-50%)} }
@@ -671,8 +612,8 @@ img  { max-width: 100%; display: block; }
   width:max-content;
 }
 
-.tmc-left  { animation: tmc-scroll-left  38s linear infinite; }
-.tmc-right { animation: tmc-scroll-right 42s linear infinite; }
+.tmc-left  { animation: tmc-scroll-left  38s linear infinite; will-change:transform; }
+.tmc-right { animation: tmc-scroll-right 42s linear infinite; will-change:transform; }
 
 .tmc-track:hover { animation-play-state:paused; }
 
