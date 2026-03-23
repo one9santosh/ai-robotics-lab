@@ -179,10 +179,8 @@ form.addEventListener('submit', e => {
 
   fetch(scriptURL, { method: 'POST', body: new FormData(form)})
     .then(response => {
-      // Success hone par ye hoga
-      submitBtn.style.display = 'none'
-      formSuccess.style.display = 'block'
-      form.reset() // Form saaf kar dega
+      // Success hone par thank you page par redirect karein
+      window.location.href = 'https://one9santosh.github.io/Landing-Page-V2/thankyou'
     })
     .catch(error => {
       // Error aane par ye hoga
