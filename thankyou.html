@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -479,3 +480,486 @@
 
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Thank you for your interest in TechyGuide - India's #1 STEM Platform for Schools"/>
+  <title>Thank You - TechyGuide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <style>
+    /* ═══════════════════════════════════════════════════════
+       CSS VARIABLES & RESET
+    ═══════════════════════════════════════════════════════ */
+    :root {
+      --fb: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+      --fd: 'Poppins', sans-serif;
+      --orange: #F97316;
+      --orange-d: #EA6C0B;
+      --orange-bg: rgba(249,115,22,0.08);
+      --teal: #0D9488;
+      --teal-d: #0F766E;
+      --teal-bg: rgba(13,148,136,0.08);
+      --ink: #1a1a1a;
+      --ink-2: #404040;
+      --ink-3: #737373;
+      --white: #FFFFFF;
+      --bg: #F7F5F0;
+      --bg-2: #EDEAE3;
+      --border: #E0DDD5;
+      --r-sm: 8px;
+      --r-md: 12px;
+      --r-lg: 16px;
+      --sh: 0 4px 20px rgba(0,0,0,0.08);
+      --t: 0.3s;
+      --ease: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--fb); background: var(--bg); color: var(--ink); line-height: 1.65; min-height: 100vh; display: flex; flex-direction: column; }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; }
+
+    /* ═══════════════════════════════════════════════════════
+       LAYOUT
+    ═══════════════════════════════════════════════════════ */
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ═══════════════════════════════════════════════════════
+       TYPOGRAPHY
+    ═══════════════════════════════════════════════════════ */
+    .section-label {
+      font-family: var(--fb);
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .section-label::before {
+      content: '';
+      width: 16px;
+      height: 2px;
+      background: var(--orange);
+      border-radius: 2px;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    /* ═══════════════════════════════════════════════════════
+       BUTTONS
+    ═══════════════════════════════════════════════════════ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      font-family: var(--fb);
+      font-size: .9rem;
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: var(--r-md);
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: all var(--t) var(--ease);
+      text-decoration: none;
+    }
+    .btn-primary {
+      background: var(--orange);
+      color: var(--white);
+      border-color: var(--orange);
+      box-shadow: 0 4px 14px rgba(249,115,22,.3);
+    }
+    .btn-primary:hover, .btn-primary:focus {
+      background: var(--orange-d);
+      border-color: var(--orange-d);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(249,115,22,.4);
+    }
+    .btn-lg {
+      padding: 14px 32px;
+      font-size: 1rem;
+    }
+
+    /* ═══════════════════════════════════════════════════════
+       NAVBAR
+    ═══════════════════════════════════════════════════════ */
+    .navbar {
+      background: var(--white);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-wrap {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo img {
+      height: 40px;
+      width: auto;
+    }
+
+    /* ═══════════════════════════════════════════════════════
+       MAIN CONTENT
+    ═══════════════════════════════════════════════════════ */
+    .thankyou-section {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 20px;
+      background: linear-gradient(135deg, var(--bg) 0%, var(--bg-2) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* ═══════════════════════════════════════════════════════
+       ANIMATED BACKGROUND
+    ═══════════════════════════════════════════════════════ */
+    .thankyou-bg {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Glowing orbs */
+    .tbg-circle { position: absolute; border-radius: 50%; }
+    .tbg-1 {
+      width: 500px; height: 500px; top: -150px; right: -100px;
+      background: radial-gradient(circle, rgba(249,115,22,.12) 0%, transparent 65%);
+      animation: tbg-pulse 8s ease-in-out infinite;
+    }
+    .tbg-2 {
+      width: 350px; height: 350px; bottom: -80px; left: -60px;
+      background: radial-gradient(circle, rgba(13,148,136,.1) 0%, transparent 65%);
+      animation: tbg-pulse 10s ease-in-out infinite reverse;
+    }
+    .tbg-3 {
+      width: 200px; height: 200px; top: 40%; left: 35%;
+      background: radial-gradient(circle, rgba(124,58,237,.06) 0%, transparent 65%);
+      animation: tbg-drift 14s ease-in-out infinite;
+    }
+    @keyframes tbg-pulse {
+      0%,100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.15); opacity: .7; }
+    }
+    @keyframes tbg-drift {
+      0%,100% { transform: translate(0, 0); }
+      33% { transform: translate(30px, -20px); }
+      66% { transform: translate(-20px, 15px); }
+    }
+
+    /* Dot grid */
+    .tbg-dots {
+      position: absolute; inset: 0;
+      background-image: radial-gradient(circle, rgba(17,24,39,.1) 1px, transparent 1px);
+      background-size: 24px 24px;
+      animation: tbg-dots-shift 20s linear infinite;
+    }
+    @keyframes tbg-dots-shift {
+      from { background-position: 0 0; }
+      to { background-position: 48px 48px; }
+    }
+
+    /* Grid lines */
+    .tbg-grid {
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(249,115,22,.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(249,115,22,.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      animation: tbg-grid-scroll 18s linear infinite;
+    }
+    @keyframes tbg-grid-scroll {
+      from { background-position: 0 0; }
+      to { background-position: 60px 60px; }
+    }
+
+    /* Particles */
+    .tbg-particle {
+      position: absolute; border-radius: 50%; pointer-events: none;
+      animation: tbg-particle-rise linear infinite;
+    }
+    .tbp-1 { width: 5px; height: 5px; background: rgba(249,115,22,.5); left: 10%; bottom: -10px; animation-duration: 10s; animation-delay: 0s; }
+    .tbp-2 { width: 3px; height: 3px; background: rgba(13,148,136,.5); left: 25%; bottom: -10px; animation-duration: 12s; animation-delay: 2s; }
+    .tbp-3 { width: 6px; height: 6px; background: rgba(249,115,22,.35); left: 45%; bottom: -10px; animation-duration: 9s; animation-delay: 1s; }
+    .tbp-4 { width: 4px; height: 4px; background: rgba(124,58,237,.4); left: 65%; bottom: -10px; animation-duration: 11s; animation-delay: 3s; }
+    .tbp-5 { width: 5px; height: 5px; background: rgba(13,148,136,.45); left: 80%; bottom: -10px; animation-duration: 13s; animation-delay: 1.5s; }
+    .tbp-6 { width: 3px; height: 3px; background: rgba(249,115,22,.5); left: 92%; bottom: -10px; animation-duration: 8s; animation-delay: 4s; }
+    @keyframes tbg-particle-rise {
+      0% { transform: translateY(0) scale(1); opacity: 0; }
+      10% { opacity: 1; }
+      90% { opacity: .5; }
+      100% { transform: translateY(-120vh) scale(.3); opacity: 0; }
+    }
+
+    /* Morphing blobs */
+    .tbg-morph { position: absolute; pointer-events: none; filter: blur(35px); }
+    .tbg-morph-1 {
+      width: 280px; height: 280px; top: 8%; left: 4%;
+      background: rgba(249,115,22,.06);
+      border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%;
+      animation: tbg-morph-shape 12s ease-in-out infinite, tbg-morph-move1 16s ease-in-out infinite;
+    }
+    .tbg-morph-2 {
+      width: 220px; height: 220px; bottom: 10%; right: 5%;
+      background: rgba(13,148,136,.05);
+      border-radius: 40% 60% 30% 70% / 60% 40% 60% 40%;
+      animation: tbg-morph-shape 10s ease-in-out infinite reverse, tbg-morph-move2 18s ease-in-out infinite;
+    }
+    @keyframes tbg-morph-shape {
+      0%,100% { border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%; }
+      25% { border-radius: 30% 70% 40% 60% / 40% 50% 60% 50%; }
+      50% { border-radius: 50% 50% 30% 70% / 70% 30% 50% 50%; }
+      75% { border-radius: 70% 30% 60% 40% / 30% 70% 40% 60%; }
+    }
+    @keyframes tbg-morph-move1 {
+      0%,100% { transform: translate(0, 0); }
+      50% { transform: translate(40px, -30px); }
+    }
+    @keyframes tbg-morph-move2 {
+      0%,100% { transform: translate(0, 0); }
+      50% { transform: translate(-35px, 20px); }
+    }
+
+    .thankyou-card {
+      background: var(--white);
+      border-radius: var(--r-lg);
+      padding: 48px 40px;
+      max-width: 560px;
+      width: 100%;
+      text-align: center;
+      box-shadow: var(--sh);
+      position: relative;
+      z-index: 1;
+      animation: cardFloat 0.8s var(--ease) forwards;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    @keyframes cardFloat {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .thankyou-icon {
+      font-size: 4rem;
+      margin-bottom: 16px;
+      animation: iconPop 0.6s var(--ease) 0.3s forwards;
+      opacity: 0;
+      transform: scale(0.5);
+    }
+
+    @keyframes iconPop {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .thankyou-title {
+      font-family: var(--fd);
+      font-size: clamp(1.8rem, 5vw, 2.4rem);
+      font-weight: 900;
+      color: var(--ink);
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+    .thankyou-title em {
+      font-style: italic;
+      color: var(--orange);
+    }
+
+    .thankyou-subtitle {
+      font-size: 1.1rem;
+      color: var(--ink-2);
+      margin-bottom: 32px;
+      line-height: 1.7;
+    }
+
+    .success-features {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 32px;
+      text-align: left;
+      padding: 24px;
+      background: var(--teal-bg);
+      border-radius: var(--r-md);
+    }
+    .sf-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.95rem;
+      color: var(--ink-2);
+    }
+    .sf-icon {
+      width: 24px;
+      height: 24px;
+      background: var(--teal);
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    .thankyou-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    .what-happens {
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+    .what-happens p {
+      font-size: 0.85rem;
+      color: var(--ink-3);
+      margin-bottom: 8px;
+    }
+
+    /* ═══════════════════════════════════════════════════════
+       FOOTER
+    ═══════════════════════════════════════════════════════ */
+    .footer {
+      background: var(--white);
+      border-top: 1px solid var(--border);
+      padding: 24px 20px;
+      text-align: center;
+    }
+    .footer p {
+      font-size: 0.85rem;
+      color: var(--ink-3);
+    }
+    .footer a {
+      color: var(--teal);
+      font-weight: 600;
+    }
+    .footer a:hover {
+      color: var(--teal-d);
+      text-decoration: underline;
+    }
+
+    /* ═══════════════════════════════════════════════════════
+       RESPONSIVE
+    ═══════════════════════════════════════════════════════ */
+    @media (max-width: 600px) {
+      .thankyou-card {
+        padding: 32px 24px;
+      }
+      .thankyou-actions {
+        flex-direction: column;
+      }
+      .thankyou-actions .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="nav-wrap">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/Logo_TG_Tagline 2.png" alt="TechyGuide Logo">
+      </a>
+    </div>
+  </header>
+
+  <!-- Thank You Section -->
+  <section class="thankyou-section">
+    <div class="thankyou-bg">
+      <div class="tbg-circle tbg-1"></div>
+      <div class="tbg-circle tbg-2"></div>
+      <div class="tbg-circle tbg-3"></div>
+      <div class="tbg-dots"></div>
+      <div class="tbg-grid"></div>
+      <div class="tbg-particle tbp-1"></div>
+      <div class="tbg-particle tbp-2"></div>
+      <div class="tbg-particle tbp-3"></div>
+      <div class="tbg-particle tbp-4"></div>
+      <div class="tbg-particle tbp-5"></div>
+      <div class="tbg-particle tbp-6"></div>
+      <div class="tbg-morph tbg-morph-1"></div>
+      <div class="tbg-morph tbg-morph-2"></div>
+    </div>
+    <div class="container">
+      <div class="thankyou-card">
+        <div class="thankyou-icon">🎉</div>
+        
+        <div class="section-label" style="justify-content: center; display: flex;">Request Received</div>
+        
+        <h1 class="thankyou-title">Thank You for<br/><em>Choosing TechyGuide!</em></h1>
+        
+        <p class="thankyou-subtitle">
+          Your free demo request has been submitted successfully. Our STEM experts are reviewing your information and will reach out to you shortly.
+        </p>
+
+        <div class="success-features">
+          <div class="sf-item">
+            <span class="sf-icon">✓</span>
+            <span>Our team will contact you within 24-48 hours</span>
+          </div>
+          <div class="sf-item">
+            <span class="sf-icon">✓</span>
+            <span>Free consultation for your school/institution</span>
+          </div>
+          <div class="sf-item">
+            <span class="sf-icon">✓</span>
+            <span>Custom STEM solution tailored to your needs</span>
+          </div>
+        </div>
+
+        <div class="thankyou-actions">
+          <a href="index.html" class="btn btn-primary btn-lg">← Back to Home</a>
+          <a href="tel:+919114036376" class="btn btn-lg" style="background: var(--teal-bg); color: var(--teal);">📞 Call Now</a>
+        </div>
+
+        <div class="what-happens">
+          <p>Have questions? Contact us directly:</p>
+          <p>
+            📞 <a href="tel:+919114036376">+91 91140 36376</a> &nbsp;|&nbsp; 
+            ✉️ <a href="mailto:info@techyguide.in">info@techyguide.in</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2024 TechyGuide. All rights reserved. | India's #1 STEM Platform for Schools</p>
+    </div>
+  </footer>
+
+</body>
+</html>
+>>>>>>> 362c81c40cf75b3afbc335a5b45905b0211b52c5
