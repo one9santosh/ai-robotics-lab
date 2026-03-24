@@ -461,7 +461,8 @@ img  { max-width: 100%; display: block; }
 .tlink:hover { color:var(--teal-d); text-decoration:underline; }
 
 @media(min-width:900px) {
-  .schools-grid { grid-template-columns:1fr 1fr; align-items:start; }
+  .schools-grid { grid-template-columns:1fr 1fr; align-items:stretch; }
+  .school-feat, .school-minis { height:100%; }
 }
 
 /* ================================================================
