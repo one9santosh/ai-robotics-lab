@@ -289,7 +289,7 @@ img  { max-width: 100%; display: block; }
 ================================================================ */
 .marquee-bar { background:var(--ink); overflow:hidden; padding:13px 0; }
 .mq-track { display:inline-flex; gap:28px; white-space:nowrap; animation:mq 28s linear infinite; will-change:transform; }
-.mq-track span { font-family:var(--fd); font-size:.85rem; font-weight:700; color:rgb(55, 251, 251); }
+.mq-track span { font-family:var(--fd); font-size:.85rem; font-weight:700; color:rgb(0, 200, 200); }
 .mq-track em { color:var(--orange); font-style:normal; font-size:.7rem; }
 @keyframes mq { from{transform:translateX(0)} to{transform:translateX(-50%)} }
 
