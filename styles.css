@@ -444,8 +444,17 @@ img  { max-width: 100%; display: block; }
   display:flex; flex-direction:column;
 }
 .sf-img {
-  width:100%; margin-top:20px; border-radius:var(--r);
-  object-fit:cover; max-height:200px; flex-shrink:0;
+  width:100%; margin-bottom:20px; border-radius:var(--r);
+  object-fit:cover; height:180px; flex-shrink:0;
+}
+.schools-images {
+  display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:32px;
+}
+.schools-images img {
+  width:100%; height:180px; object-fit:cover; border-radius:var(--r);
+}
+@media(max-width:640px) {
+  .schools-images { grid-template-columns:1fr; }
 }
 .school-feat::after { content:''; position:absolute; width:220px; height:220px; border-radius:50%; background:rgba(13,148,136,.05); top:-60px; right:-50px; pointer-events:none; }
 .sf-tag { display:inline-block; background:rgba(255,255,255,.2); color:var(--white); font-size:.68rem; font-weight:800; letter-spacing:.1em; text-transform:uppercase; padding:4px 12px; border-radius:100px; margin-bottom:14px; }
