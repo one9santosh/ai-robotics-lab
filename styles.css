@@ -466,7 +466,7 @@ img  { max-width: 100%; display: block; }
 .sf-list li::before { content:'✓'; position:absolute; left:0; color:rgba(255,255,255,.6); font-weight:800; }
 
 .school-minis { display:flex; flex-direction:column; gap:14px; }
-.smini { background:var(--white); border:1px solid var(--border); border-radius:var(--r); padding:20px; display:flex; gap:14px; align-items:flex-start; transition:border-color var(--t), box-shadow var(--t); }
+.smini { background:var(--white); border:1px solid var(--border); border-radius:var(--r); padding:20px; display:flex; gap:14px; align-items:flex-start; transition:border-color var(--t), box-shadow var(--t); flex:1; }
 .smini:hover { border-color:rgba(249,115,22,.3); box-shadow:var(--sh); }
 .smini-em { font-size:1.6rem; flex-shrink:0; }
 .smini h4 { font-family:var(--fd); font-size:.95rem; font-weight:800; margin-bottom:5px; }
@@ -477,6 +477,9 @@ img  { max-width: 100%; display: block; }
 @media(min-width:900px) {
   .schools-grid { grid-template-columns:1fr 1fr; align-items:stretch; }
   .school-feat, .school-minis { height:100%; }
+  .school-minis { justify-content:space-between; gap:0; }
+  .smini { flex:1; align-items:stretch; margin-bottom:14px; }
+  .smini:last-child { margin-bottom:0; }
 }
 
 /* ================================================================
