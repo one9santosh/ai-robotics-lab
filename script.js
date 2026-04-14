@@ -180,7 +180,7 @@ form.addEventListener('submit', e => {
   fetch(scriptURL, { method: 'POST', body: new FormData(form)})
     .then(response => {
       // Success hone par thank you page par redirect karein
-      window.location.href = 'https://one9santosh.github.io/Landing-Page-V2/thankyou'
+      window.location.href = 'https://one9santosh.github.io/ai-robotics-lab/thankyou'
     })
     .catch(error => {
       // Error aane par ye hoga
