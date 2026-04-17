@@ -99,57 +99,65 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
      ╚═══════════════════════════════╝ -->
 <section class="hero" id="home">
   <div class="hero-bg"></div>
-
   <div class="container hero-inner">
     <div class="hero-text">
-
       <div class="eyebrow hero-anim-fade">
         <span class="ey-dot"></span> India's Most Trusted STEM Platform
       </div>
-
       <h1 class="hero-h1 hero-anim-slide">
         Setup<br/>
-        <em class="hero-glitch" data-text="Innovation">AI & Robotics Lab</em><br/>
-       in Your School<br/>
-
+        <em class="hero-glitch" data-text="Innovation">AI &amp; Robotics Lab</em><br/>
+        in Your School
+      </h1>
       <p class="hero-p hero-anim-slide hero-delay-1">
-       Complete Installation + Training + Support for Schools
+        Complete Installation + Training + Support for Schools
       </p>
-
-      <div class="hero-btns hero-anim-slide hero-delay-2">
-        <a href="#lead-form" class="btn btn-primary btn-lg pulse">Book Free Workshop</a>
-        <a href="#about" class="btn btn-ghost btn-lg">See How It Works &darr;</a>
-      </div>
-
       <div class="trust-row hero-anim-slide hero-delay-3">
-        <!-- <div class="trust-pill">&#127885; 50+ ATL Labs</div> -->
         <div class="trust-pill">&#127979; 700+ Schools</div>
         <div class="trust-pill">&#11088; 5-Star GeM Vendor</div>
+        <div class="trust-pill">&#128640; 50,000+ Students</div>
       </div>
-
     </div>
-
-    <!-- Right: floating hero image -->
-    <div class="hero-img-wrap hero-anim-fade hero-delay-1" id="heroImgWrap">
-      <div class="hi-ring"></div>
-      <div class="hi-ring2"></div>
-      <div class="hi-dot"></div>
-      <div class="hi-dot"></div>
-      <div class="hi-dot"></div>
-      <div class="hi-dot"></div>
-      <div class="hi-dot"></div>
-      <div class="hi-orb"></div>
-      <!-- floating tech tags -->
-      <div class="htag htag-1">AI</div>
-      <div class="htag htag-2">Robotics</div>
-      <div class="htag htag-3">IoT</div>
-      <div class="htag htag-4">Python</div>
-      <img
-        src="assets/Hero1.jpg"
-        alt="Students working on STEM project"
-        class="hero-float-img"
-        fetchpriority="high"
-      />
+    <!-- Right: inline lead form -->
+    <div class="hero-form-wrap hero-anim-fade hero-delay-1">
+      <form class="lead-form-box" id="mainLeadForm" novalidate>
+        <div class="lfb-top">
+          <h3>Get Free Consultation</h3>
+        </div>
+        <div class="frow">
+          <div class="fg"><label for="fname">Full Name *</label><input type="text" id="fname" placeholder="Your full name" name="Full Name" required/><span class="ferr" id="fnameErr"></span></div>
+          <div class="fg"><label for="phone">Phone *</label><input type="tel" id="phone" placeholder="+91 XXXXX XXXXX" name="Phone" required/><span class="ferr" id="phoneErr"></span></div>
+        </div>
+        <div class="fg"><label for="email">Email *</label><input type="email" id="email" placeholder="you@school.edu.in" name="Email" required/><span class="ferr" id="emailErr"></span></div>
+        <div class="frow">
+          <div class="fg"><label for="institution">Institution *</label><input type="text" id="institution" placeholder="School / Organization" name="Institution" required/><span class="ferr" id="instErr"></span></div>
+          <div class="fg"><label for="city">City *</label><input type="text" id="city" placeholder="Your city" name="City" required/><span class="ferr" id="cityErr"></span></div>
+        </div>
+        <div class="fg">
+          <label for="interest">I'm Interested In *</label>
+          <select id="interest" name="Interest" required>
+            <option value="">&#8212; Select your interest &#8212;</option>
+            <option>STEM Innovation Lab Setup</option>
+            <option>AI &amp; Robotics Lab</option>
+            <option>School Workshop / Tinkerfest</option>
+            <option>DIY STEM Kits (Bulk Order)</option>
+            <option>Online / Virtual Courses</option>
+            <option>Other / Not Sure Yet</option>
+          </select>
+          <span class="ferr" id="intErr"></span>
+        </div>
+        <div class="fg"><label for="msg">Message (Optional)</label><textarea id="msg" rows="2" placeholder="Tell us about your school..." name="Message"></textarea></div>
+        <button type="submit" class="btn btn-submit" id="submitBtn">
+          <span id="submitText">&#128640; Get My Free Demo &#8594;</span>
+          <span id="submitLoader" style="display:none">Sending&#8230;</span>
+        </button>
+        <p class="form-note">&#128274; Private &amp; secure. No spam, ever.</p>
+        <div class="form-success" id="formSuccess" style="display:none">
+          <div style="font-size:2.5rem;margin-bottom:10px">&#127881;</div>
+          <h4>Request Received!</h4>
+          <p>Our STEM expert will call you <strong>very soon</strong>.</p>
+        </div>
+      </form>
     </div>
   </div>
 </section>
@@ -180,81 +188,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
      ║         LEAD FORM             ║
      ╚═══════════════════════════════╝ -->
-<section class="section bg-white" id="lead-form">
-  <div class="container">
-    <div class="lead-layout">
-
-      <div class="lead-left reveal">
-        <div class="section-label">Free Consultation</div>
-        <h2 class="lead-title">Book Your <em>Free</em><br/>Demo Today</h2>
-        <!-- <p class="lead-sub">Our STEM expert will reach out within 2 hours. No commitment, no pressure — just real answers for your school.</p> -->
-
-        <div class="lead-perks">
-          <div class="lp"><span class="lp-ck">✓</span>Free consultation with a STEM specialist</div>
-          <div class="lp"><span class="lp-ck">✓</span>Customized proposal for your institution</div>
-          <div class="lp"><span class="lp-ck">✓</span>Sample kit demo at no charge</div>
-          <div class="lp"><span class="lp-ck">✓</span>GeM / Government procurement support</div>
-          <div class="lp"><span class="lp-ck">✓</span>No upfront payment required</div>
-        </div>
-
-        <div class="lead-contacts">
-          <a href="tel:+919114036376" class="contact-chip">📞 +91 91140 36376</a>
-          <a href="mailto:reachus@techyguide.in" class="contact-chip">✉️ reachus@techyguide.in</a>
-        </div>
-      </div>
-
-      <div class="lead-right reveal d2">
-        <form class="lead-form-box" id="mainLeadForm" novalidate>
-          <div class="lfb-top">
-            <h3>Get Free Consultation</h3>
-           
-          </div>
-
-          <div class="frow">
-            <div class="fg"><label for="fname">Full Name *</label><input type="text" id="fname" placeholder="Your full name" name="Full Name" required/><span class="ferr" id="fnameErr"></span></div>
-            <div class="fg"><label for="phone">Phone *</label><input type="tel" id="phone" placeholder="+91 XXXXX XXXXX" name="Phone" required/><span class="ferr" id="phoneErr"></span></div>
-          </div>
-
-          <div class="fg"><label for="email">Email *</label><input type="email" id="email" placeholder="you@school.edu.in" name="Email" required/><span class="ferr" id="emailErr"></span></div>
-
-          <div class="frow">
-            <div class="fg"><label for="institution">Institution *</label><input type="text" id="institution" placeholder="School / Organization" name="Institution" required/><span class="ferr" id="instErr"></span></div>
-            <div class="fg"><label for="city">City *</label><input type="text" id="city" placeholder="Your city" name="City" required/><span class="ferr" id="cityErr"></span></div>
-          </div>
-
-          <div class="fg">
-            <label for="interest">I'm Interested In *</label>
-            <select id="interest" name="Interest" required>
-              <option value="">— Select your interest —</option>
-              <option>STEM Innovation Lab Setup</option>
-              <!-- <option>ATL Lab (Atal Tinkering Lab)</option> -->
-              <option>AI & Robotics Lab</option>
-              <option>School Workshop / Tinkerfest</option>
-              <option>DIY STEM Kits (Bulk Order)</option>
-              <option>Online / Virtual Courses</option>
-              <option>Other / Not Sure Yet</option>
-            </select>
-            <span class="ferr" id="intErr"></span>
-          </div>
-
-          <div class="fg"><label for="msg">Message (Optional)</label><textarea id="msg" rows="3" placeholder="Tell us about your school..." name="Message"></textarea></div>
-
-          <button type="submit" class="btn btn-submit" id="submitBtn">
-            <span id="submitText">🚀 Get My Free Demo →</span>
-            <span id="submitLoader" style="display:none">Sending…</span>
-          </button>
-          <p class="form-note">🔒 Private & secure. No spam, ever.</p>
-
-          <div class="form-success" id="formSuccess" style="display:none">
-            <div style="font-size:2.5rem;margin-bottom:10px">🎉</div>
-            <h4>Request Received!</h4>
-            <p>Our STEM expert will call you .</p>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
 
 
 <!-- ╔═══════════════════════════════╗
