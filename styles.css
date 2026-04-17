@@ -166,7 +166,7 @@ img  { max-width: 100%; display: block; }
 @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.25} }
 
 .hero-h1 {
-  font-family:var(--fd); font-size:clamp(3.2rem,10vw,5.5rem);
+  font-family:var(--fd); font-size:clamp(2.2rem,6vw,3.8rem);
   font-weight:900; line-height:1.0; letter-spacing:-.03em; color:var(--ink); margin-bottom:20px;
 }
 .hero-h1 em { font-style:italic; color:var(--orange); -webkit-text-fill-color:var(--orange); }
