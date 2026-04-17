@@ -170,7 +170,7 @@ img  { max-width: 100%; display: block; }
   font-weight:900; line-height:1.0; letter-spacing:-.03em; color:var(--ink); margin-bottom:20px;
 }
 .hero-h1 em { font-style:italic; color:var(--orange); -webkit-text-fill-color:var(--orange); }
-.hero-p { font-size:.975rem; color:var(--ink-3); line-height:1.7; margin-bottom:28px; }
+.hero-p { font-size:.975rem; color:var(--ink-3); line-height:1.7; margin-bottom:28px; letter-spacing:0.02em; }
 .hero-p strong { color:var(--ink); }
 .hero-btns { display:flex; flex-wrap:wrap; gap:12px; margin-bottom:28px; }
 .trust-row { display:flex; flex-wrap:wrap; gap:8px; }
