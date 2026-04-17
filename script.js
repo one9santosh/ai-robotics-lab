@@ -180,7 +180,7 @@ form.addEventListener('submit', e => {
   fetch(scriptURL, { method: 'POST', body: new FormData(form)})
     .then(response => {
       // Success hone par thank you page par redirect karein
-      window.location.href = 'https://one9santosh.github.io/ai-robotics-lab/thankyou'
+      window.location.href = 'https://techyguide.in/robotics-lab/thankyou'
     })
     .catch(error => {
       // Error aane par ye hoga
@@ -191,6 +191,16 @@ form.addEventListener('submit', e => {
       submitLoader.style.display = 'none'
     })
 })
+
+/* ─── MOBILE CTA BAR ─── */
+const mobileCTABtn = document.getElementById('mobileCTABtn');
+if (mobileCTABtn) {
+  mobileCTABtn.addEventListener('click', e => {
+    e.preventDefault();
+    const form = document.getElementById('mainLeadForm');
+    if (form) form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+}
 
 /* ─── 7. SMOOTH SCROLL (nav offset) ─── */
 document.querySelectorAll('a[href^="#"]').forEach(a => {

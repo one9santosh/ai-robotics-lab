@@ -151,22 +151,34 @@ img  { max-width: 100%; display: block; }
 ================================================================ */
 .hero {
   padding-top: 72px; /* nav height */
-  min-height: 100svh; display:flex; flex-direction:column; justify-content:center;
+  min-height: auto; display:flex; flex-direction:column; justify-content:center;
   position:relative; overflow:hidden; background:var(--white);
+}
+@media(min-width:900px) {
+  .hero { min-height:100svh; }
 }
 .hero-bg { display:none; }
 
 .hero-inner {
   position:relative; z-index:2;
   display:grid; grid-template-columns:1fr; gap:40px; align-items:center;
-  padding:48px 20px 64px;
+  padding:24px 20px 40px;
 }
 
 /* Hero inline form */
-.hero-form-wrap { display:none; }
+.hero-form-wrap {
+  display:block; width:100%; margin-top:32px;
+}
+.hero-form-wrap .lead-form-box {
+  width:100%; box-shadow:var(--sh-lg);
+}
 @media(min-width:900px) {
-  .hero-form-wrap { display:flex; align-items:center; justify-content:center; }
-  .hero-form-wrap .lead-form-box { width:100%; max-width:480px; box-shadow:var(--sh-lg); }
+  .hero-form-wrap {
+    display:flex; align-items:center; justify-content:center; margin-top:0;
+  }
+  .hero-form-wrap .lead-form-box {
+    max-width:480px;
+  }
 }
 .eyebrow { display:inline-flex; align-items:center; gap:8px; font-size:.78rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--teal); margin-bottom:16px; }
 .ey-dot { width:8px; height:8px; background:var(--orange); border-radius:50%; animation:blink 1.8s ease-in-out infinite; flex-shrink:0; }
@@ -781,6 +793,23 @@ img  { max-width: 100%; display: block; }
   pointer-events: none;
 }
 .float-cta.visible { opacity: 1; transform: none; pointer-events: auto; }
+
+/* Sticky mobile CTA bar */
+.mobile-cta-bar {
+  display:none;
+  position:fixed; bottom:0; left:0; right:0; z-index:998;
+  background:var(--orange); padding:14px 20px;
+  box-shadow:0 -4px 20px rgba(249,115,22,.3);
+}
+.mobile-cta-bar a {
+  display:block; text-align:center;
+  font-family:var(--fb); font-weight:800; font-size:1rem;
+  color:var(--white); text-decoration:none; letter-spacing:.02em;
+}
+@media(max-width:899px) {
+  .mobile-cta-bar { display:block; }
+  body { padding-bottom:60px; }
+}
 
 /* ================================================================
    MISC MOBILE FIXES
